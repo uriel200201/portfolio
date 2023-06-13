@@ -11,15 +11,15 @@ export default function Layout({
 }) {
 	return (
 		<>
-			{/* <Head>
-				<link rel='icon' href={favicon} />
+			<Head>
+				<link rel='icon' />
 				<title>{title}</title>
 				<meta name='description' content={description} />
 				<meta name='author' content={author} />
 				<meta name='copyright' content={copyright} />
 				<meta name='robots' content={robots} />
 				<meta name='keywords' content={keywords} />
-			</Head> */}
+			</Head>
 			<main lang='es'>{children}</main>
 		</>
 	)
