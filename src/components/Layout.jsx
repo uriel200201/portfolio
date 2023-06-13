@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Script from 'next/script'
 export default function Layout({
 	children,
 	title,
@@ -18,7 +19,23 @@ export default function Layout({
 				<meta name='copyright' content={copyright} />
 				<meta name='robots' content={robots} />
 				<meta name='keywords' content={keywords} />
+				{/* Google tag (gtag.js) */}
 			</Head>
+			<Script
+				async
+				src='https://www.googletagmanager.com/gtag/js?id=G-LJ4N842RX4'></Script>
+			<Script
+				id='googleAnalytics'
+				dangerouslySetInnerHTML={{
+					__html: `
+						window.dataLayer = window.dataLayer || [];
+						function gtag(){dataLayer.push(arguments);}
+						gtag('js', new Date());
+
+						gtag('config', 'G-LJ4N842RX4');
+					`,
+				}}
+			/>
 			<main lang='es'>{children}</main>
 		</>
 	)
