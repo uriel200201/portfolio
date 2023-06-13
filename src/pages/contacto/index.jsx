@@ -2,7 +2,6 @@ import React, { useRef } from 'react'
 import emailjs from '@emailjs/browser'
 import Layout from '../../components/Layout'
 import swal from 'sweetalert'
-const process = require('dotenv').config()
 
 export default function Contacto() {
 	const form = useRef()
@@ -12,10 +11,10 @@ export default function Contacto() {
 
 		emailjs
 			.sendForm(
-				process.env.SERVICE_ID,
-				process.env.TEMPLATE_ID,
+				'service_ug71uff',
+				'template_7rvwqif',
 				form.current,
-				process.env.PUBLIC_KEY
+				'dGxWpcOS0_UedJLWm'
 			)
 			.then(
 				() => {
