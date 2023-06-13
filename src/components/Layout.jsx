@@ -11,7 +11,7 @@ export default function Layout({
 }) {
 	return (
 		<>
-			<Head>
+			{/* <Head>
 				<link rel='icon' href={favicon} />
 				<title>{title}</title>
 				<meta name='description' content={description} />
@@ -19,7 +19,7 @@ export default function Layout({
 				<meta name='copyright' content={copyright} />
 				<meta name='robots' content={robots} />
 				<meta name='keywords' content={keywords} />
-			</Head>
+			</Head> */}
 			<main lang='es'>{children}</main>
 		</>
 	)
