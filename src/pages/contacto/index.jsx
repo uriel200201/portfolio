@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import emailjs from '@emailjs/browser'
 import Layout from '../../components/Layout'
 import swal from 'sweetalert'

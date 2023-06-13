@@ -10,7 +10,7 @@ export default function Layout({
 	keywords,
 }) {
 	return (
-		<div>
+		<>
 			<Head>
 				<link rel='icon' href={favicon} />
 				<title>{title}</title>
@@ -21,7 +21,7 @@ export default function Layout({
 				<meta name='keywords' content={keywords} />
 			</Head>
 			<main lang='es'>{children}</main>
-		</div>
+		</>
 	)
 }
 
