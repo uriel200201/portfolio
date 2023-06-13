@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import favicon from '../../public/favicon.ico'
 export default function Layout({
 	children,
 	title,
@@ -12,7 +11,7 @@ export default function Layout({
 	return (
 		<>
 			<Head>
-				<link rel='icon' />
+				<link rel='icon' href='favicon.ico' />
 				<title>{title}</title>
 				<meta name='description' content={description} />
 				<meta name='author' content={author} />
