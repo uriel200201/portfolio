@@ -2,6 +2,7 @@ import { Navbar } from 'flowbite-react'
 import Link from 'next/link'
 import NavItem from './NavItem'
 import { useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
 
 const MENU_LIST = [
 	{ text: 'Inicio', href: '/' },
@@ -12,7 +13,8 @@ const MENU_LIST = [
 ]
 
 const NavBar = () => {
-	const [activeSection, setActiveSection] = useState('/')
+	const { asPath } = useRouter()
+	const [activeSection, setActiveSection] = useState('')
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -42,7 +44,7 @@ const NavBar = () => {
 				}
 			})
 		}
-
+		asPath === '/contacto' ? setActiveSection('/contacto') : ''
 		window.addEventListener('scroll', handleScroll)
 		return () => {
 			window.removeEventListener('scroll', handleScroll)
@@ -60,7 +62,7 @@ const NavBar = () => {
 					</Navbar.Brand>
 				</Link>
 				<Navbar.Toggle />
-				<Navbar.Collapse>
+				<Navbar.Collapse className='flex flex-col text-center my-4'>
 					{MENU_LIST.map((menu) => (
 						<div
 							onClick={() => setActiveSection(menu.href)}
