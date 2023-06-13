@@ -2,22 +2,28 @@ import React, { useRef } from 'react'
 import emailjs from '@emailjs/browser'
 import Layout from '../../components/Layout'
 import swal from 'sweetalert'
+const process = require('dotenv').config()
 
 export default function Contacto() {
 	const form = useRef()
 
 	const sendEmail = (e) => {
 		e.preventDefault()
-
+		console.log(
+			process.env.NEXT_PUBLIC_SERVICE_ID,
+			process.env.NEXT_PUBLIC_TEMPLATE_ID,
+			form.current,
+			process.env.PUBLIC_KEY || process.env.NEXT_PUBLIC_PRIVATE_KEY
+		)
 		emailjs
 			.sendForm(
-				'service_ug71uff',
-				'template_7rvwqif',
+				process.env.NEXT_PUBLIC_SERVICE_ID,
+				process.env.NEXT_PUBLIC_TEMPLATE_ID,
 				form.current,
-				'dGxWpcOS0_UedJLWm'
+				process.env.PUBLIC_KEY || process.env.NEXT_PUBLIC_PRIVATE_KEY
 			)
 			.then(
-				() => {
+				(res) => {
 					swal(
 						'Envio exitoso',
 						'Se ha enviado correctamente su consulta',
@@ -25,7 +31,7 @@ export default function Contacto() {
 						{ button: 'aceptar' }
 					)
 				},
-				() => {
+				(err) => {
 					swal(
 						'Ha ocurrido un error',
 						'No se pudo enviar el mail correctamente',
@@ -34,6 +40,7 @@ export default function Contacto() {
 							button: 'aceptar',
 						}
 					)
+					console.log(err)
 				}
 			)
 	}
