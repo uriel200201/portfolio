@@ -19,7 +19,7 @@ const NavBar = () => {
 			const sectionElements = Array.from(
 				document.querySelectorAll('section')
 			)
-			console.log({ sectionElements })
+			// console.log({ sectionElements })
 
 			const scrollPosition = window.scrollY
 

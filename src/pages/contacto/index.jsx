@@ -34,7 +34,7 @@ export default function Contacto() {
 							button: 'aceptar',
 						}
 					)
-					console.log(err)
+					// console.log(err)
 				}
 			)
 	}
