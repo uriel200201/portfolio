@@ -5,7 +5,7 @@ export default function Inicio() {
 	return (
 		<div>
 			<section
-				className='flex items-center justify-center min-h-screen bg-black relative'
+				className='flex items-center justify-center min-h-screen relative'
 				id='inicio'>
 				{/**Overlay */}
 				<div className='absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-[#0575E6] to-[#00F260] opacity-90 z-[2]' />

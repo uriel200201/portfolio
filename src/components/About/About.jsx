@@ -3,8 +3,10 @@ import yo from '../../../public/assets/img/yo.jpg'
 export default function About() {
 	return (
 		<div>
-			<section id='sobreMi' className='px-8 py-12 min-h-screen bg-white'>
-				<h2 className='text-center text-5xl py-10'>Sobre mi</h2>
+			<section
+				id='sobreMi'
+				className='px-8 py-[60px] min-h-screen bg-white'>
+				<h2 className='text-center text-5xl pb-10'>Sobre mi</h2>
 				<div className='flex flex-col lg:flex-row items-center justify-around gap-8 md:pt-8'>
 					<div className='w-[50%] lg:w-[90%]'>
 						<Image
