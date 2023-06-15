@@ -3,9 +3,7 @@ import yo from '../../../public/assets/img/yo.jpg'
 export default function About() {
 	return (
 		<div>
-			<section
-				id='sobreMi'
-				className='px-8 pt-16 md:pt-12 pb-12 min-h-screen flex flex-col justify-evenly gap-y-7 lg:gap-0 bg-white'>
+			<section id='sobreMi' className='px-8 py-12 min-h-screen bg-white'>
 				<h2 className='text-center text-5xl py-10'>Sobre mi</h2>
 				<div className='flex flex-col lg:flex-row items-center justify-around gap-8 md:pt-8'>
 					<div className='w-[50%] lg:w-[90%]'>

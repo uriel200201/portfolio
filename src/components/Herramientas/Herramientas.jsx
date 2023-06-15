@@ -54,36 +54,32 @@ const lenguajes = [
 export default function Herramientas() {
 	return (
 		<div>
-			<section
-				id='herramientas'
-				className='px-8 pt-16 md:pt-12 pb-12 min-h-screen flex flex-col justify-evenly gap-y-7 lg:gap-0'>
-				<h2 className='text-center text-5xl max-h-min'>
+			<section id='herramientas' className='px-8 py-12 min-h-screen'>
+				<h2 className='text-center text-3xl py-10'>
 					Herramientas y Lenguajes
 				</h2>
-				<div>
-					<div className='grid grid-cols-2 lg:grid-cols-4 gap-8'>
-						{lenguajes.map((lenguaje) => (
-							<div
-								key={lenguaje.id}
-								className='p-6 shadow-xl border-solid border-gray-400 border-[1px] rounded-xl hover:scale-105 ease-in duration-300'>
-								<div className='grid grip-cols-1 md:grid-cols-2 gap-4 justify-center items-center'>
-									<div className='m-auto'>
-										<Image
-											src={lenguaje.image}
-											alt={lenguaje.name}
-											width='64px'
-											height='64px'
-										/>
-									</div>
-									<div className='flex flex-col items-center justify-center'>
-										<h3 className='text-base'>
-											{lenguaje.name}
-										</h3>
-									</div>
+				<div className='grid grid-cols-2 lg:grid-cols-4 gap-8 md:pt-8'>
+					{lenguajes.map((lenguaje) => (
+						<div
+							key={lenguaje.id}
+							className='p-6 shadow-xl border-solid border-gray-400 border-[1px] rounded-xl hover:scale-105 ease-in duration-300'>
+							<div className='grid grip-cols-1 md:grid-cols-2 gap-4 justify-center items-center'>
+								<div className='m-auto'>
+									<Image
+										src={lenguaje.image}
+										alt={lenguaje.name}
+										width='64px'
+										height='64px'
+									/>
+								</div>
+								<div className='flex flex-col items-center justify-center'>
+									<h3 className='text-base'>
+										{lenguaje.name}
+									</h3>
 								</div>
 							</div>
-						))}
-					</div>
+						</div>
+					))}
 				</div>
 			</section>
 		</div>
