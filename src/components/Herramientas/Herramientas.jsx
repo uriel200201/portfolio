@@ -54,7 +54,9 @@ const lenguajes = [
 export default function Herramientas() {
 	return (
 		<div>
-			<section id='herramientas' className='px-8 py-12 min-h-screen'>
+			<section
+				id='herramientas'
+				className='px-8 py-[60px] min-h-screen box-border'>
 				<h2 className='text-center text-3xl py-10'>
 					Herramientas y Lenguajes
 				</h2>
