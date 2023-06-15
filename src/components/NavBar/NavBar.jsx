@@ -1,8 +1,8 @@
 import { Navbar } from 'flowbite-react'
 import Link from 'next/link'
 import NavItem from './NavItem'
-import { useState, useEffect } from 'react'
-import { useRouter } from 'next/router'
+import { useState, useEffect, useRef } from 'react'
+import Router, { useRouter } from 'next/router'
 
 const MENU_LIST = [
 	{ text: 'Inicio', href: '/' },
@@ -12,16 +12,37 @@ const MENU_LIST = [
 	{ text: 'Contacto', href: '/contacto' },
 ]
 
+const classes = {
+	navbarSolid: 'transition duration-300 ease-in-out',
+	navbarTransparent:
+		'md:bg-transparent md:text-white md:transition md:duration-300 md:ease-in-out',
+}
+
 const NavBar = () => {
 	const { asPath } = useRouter()
 	const [activeSection, setActiveSection] = useState('')
+	const [navBackground, setNavBackground] = useState(
+		classes.navbarTransparent
+	)
+
+	const navRef = useRef()
+	navRef.current = navBackground
 
 	useEffect(() => {
+		console.log('useEffect')
+
 		const handleScroll = () => {
+			const show = window.scrollY > 20
+			if (show || asPath === '/contacto') {
+				setNavBackground(classes.navbarSolid)
+			} else {
+				setNavBackground(classes.navbarTransparent)
+			}
+
 			const sectionElements = Array.from(
 				document.querySelectorAll('section')
 			)
-			// console.log({ sectionElements })
+			console.log({ sectionElements })
 
 			const scrollPosition = window.scrollY
 
@@ -44,16 +65,30 @@ const NavBar = () => {
 				}
 			})
 		}
-		asPath === '/contacto' ? setActiveSection('/contacto') : ''
-		window.addEventListener('scroll', handleScroll)
-		return () => {
-			window.removeEventListener('scroll', handleScroll)
+
+		if (typeof window !== 'undefined') {
+			if (asPath === '/contacto') {
+				setActiveSection('/contacto')
+				setNavBackground(classes.navbarSolid)
+			} else {
+				handleScroll()
+			}
+
+			window.addEventListener('scroll', handleScroll)
+			window.addEventListener('load', handleScroll)
+
+			return () => {
+				window.removeEventListener('scroll', handleScroll)
+			}
 		}
-	}, [])
+	}, [asPath])
 
 	return (
 		<div>
-			<Navbar fluid={false} rounded={true}>
+			<Navbar
+				fluid={false}
+				rounded={true}
+				className={`${navRef.current} absolute w-full`}>
 				<Link href='/'>
 					<Navbar.Brand>
 						<h2 className='self-center whitespace-nowrap text-3xl font-semibold dark:text-white'>
