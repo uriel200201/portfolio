@@ -49,5 +49,5 @@ Layout.defaultProps = {
 	copyright: 'Uriel Agustin Jardel Ponce',
 	robots: 'noindex',
 	keywords:
-		'Uriel, Agustin, Jardel, Ponce, Desarrollador Web, Front-End, Front End, Full-Stack, Next.Js, React.Js, HTML, CSS, JS, JavaScript, PHP, Tailwind, GitHub',
+		'Uriel, Agustin, Jardel, Ponce, Desarrollador Web, Front-End, Front End, Full-Stack, Next.Js, React.Js, HTML, CSS, JS, JavaScript, PHP, Tailwind, GitHub, Uriel Jardel, Uriel Agustin, Jardel Ponce',
 }

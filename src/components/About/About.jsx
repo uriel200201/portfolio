@@ -6,7 +6,7 @@ export default function About() {
 			<section
 				id='sobreMi'
 				className='px-8 py-[60px] min-h-screen bg-white'>
-				<h2 className='text-center text-5xl pb-10'>Sobre mi</h2>
+				<h2 className='text-center text-5xl pb-10 md:pt-5'>Sobre mi</h2>
 				<div className='flex flex-col lg:flex-row items-center justify-around gap-8 md:pt-8'>
 					<div className='w-[50%] lg:w-[90%]'>
 						<Image
