@@ -20,6 +20,10 @@ export default function Layout({
 				<meta name='robots' content={robots} />
 				<meta name='keywords' content={keywords} />
 				{/* Google tag (gtag.js) */}
+				<meta
+					name='google-site-verification'
+					content='kBRiaYOzjGgHryaBFho3Xkc4UKO-keyt2djq3dnrEOE'
+				/>
 			</Head>
 			<Script
 				async
