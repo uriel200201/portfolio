@@ -57,11 +57,10 @@ export default function About() {
 							dificultades. Gracias a la formación que tuve, en
 							los diferentes cursos y en la carrera puedo
 							desenvolverme en cualquier entorno de trabajo, ya
-							sea de manera virtual u on-line. Mis principales
+							sea de manera presencial u on-line. Mis principales
 							cualidades son: facilidad para trabajar en equipo,
-							ser autodidacta, siempre hablar las cosas, ante una
-							situación de conflicto, busco la manera de hacer las
-							cosas en el menor tiempo posible.
+							ser autodidacta, resolutivo, busco la manera de
+							hacer las cosas en el menor tiempo posible.
 						</div>
 					</div>
 				</div>

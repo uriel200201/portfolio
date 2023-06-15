@@ -50,7 +50,7 @@ export default function Contacto() {
 								<label
 									htmlFor='nombre'
 									className='block mb-2 text-sm font-medium text-black'>
-									nombre
+									Nombre
 								</label>
 								<input
 									type='text'
@@ -79,7 +79,7 @@ export default function Contacto() {
 								<label
 									htmlFor='telefono'
 									className='block mb-2 text-sm font-medium text-black'>
-									Telefono
+									Teléfono
 								</label>
 								<input
 									type='tel'
@@ -93,7 +93,7 @@ export default function Contacto() {
 								<label
 									htmlFor='profesión'
 									className='block mb-2 text-sm font-medium text-black'>
-									Profesion
+									Profesión
 								</label>
 								<input
 									type='text'
@@ -108,7 +108,7 @@ export default function Contacto() {
 							<label
 								htmlFor='mensaje'
 								className='block mb-2 text-sm font-medium text-black'>
-								Consluta
+								Consulta
 							</label>
 							<textarea
 								id='mensaje'
