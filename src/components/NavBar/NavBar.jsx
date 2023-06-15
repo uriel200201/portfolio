@@ -89,8 +89,8 @@ const NavBar = () => {
 				fluid={false}
 				rounded={true}
 				className={`${navRef.current} absolute w-full`}>
-				<Link href='/'>
-					<Navbar.Brand>
+				<Link href='https://www.urieljardel.com.ar'>
+					<Navbar.Brand href='https://www.urieljardel.com.ar'>
 						<h2 className='self-center whitespace-nowrap text-3xl font-semibold dark:text-white'>
 							Uriel <span className='text-[#800080]'>J.</span>
 						</h2>
