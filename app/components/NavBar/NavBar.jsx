@@ -1,9 +1,9 @@
+'use client'
 import { Navbar } from 'flowbite-react'
-import Link from 'next/link'
 import * as reactScroll from 'react-scroll'
 import NavItem from './NavItem'
 import { useState, useEffect, useRef } from 'react'
-import Router, { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
 
 const MENU_LIST = [
 	{ text: 'Inicio', id: 'inicio', href: '/' },
@@ -14,10 +14,9 @@ const MENU_LIST = [
 ]
 
 const classes = {
-	navbarSolid:
-		'md:transition md:duration-300 md:ease-in-out text-black shadow-md',
+	navbarSolid: 'transition duration-300 ease-in-out text-black shadow-md',
 	navbarTransparent:
-		'md:bg-transparent md:text-white md:transition md:duration-300 md:ease-in-out',
+		'bg-transparent text-white transition duration-300 ease-in-out',
 }
 
 const NavBar = () => {

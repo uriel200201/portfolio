@@ -1,4 +1,5 @@
-import Link from 'next/link'
+'use client'
+import * as reactScroll from 'react-scroll'
 import React from 'react'
 
 export default function Inicio() {
@@ -14,11 +15,14 @@ export default function Inicio() {
 						<h1 className='cursor-default select-none'>
 							Desarrollador Web <br /> Full Stack
 						</h1>
-						<p className='border inline-block rounded-full px-7 py-5 mx-auto hover:bg-[#ce3232] hover:border-[#ce3232] duration-500'>
-							<Link href='/contacto'>
-								<a>¿Tenés un proyecto?</a>
-							</Link>
-						</p>
+						<reactScroll.Link
+							to='contacto'
+							spy={true}
+							smooth={true}
+							duration={500}
+							className='border inline-block rounded-full  mx-auto hover:bg-[#ce3232] hover:border-[#ce3232] duration-500 px-7 py-5'>
+							<p className=''>¿Tenés un proyecto?</p>
+						</reactScroll.Link>
 					</div>
 				</div>
 			</section>

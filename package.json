@@ -17,16 +17,18 @@
 		"@fortawesome/free-solid-svg-icons": "^6.4.0",
 		"@fortawesome/react-fontawesome": "^0.2.0",
 		"@headlessui/react": "^1.7.7",
-		"flowbite": "^1.5.3",
-		"flowbite-react": "^0.3.2",
+		"axios": "^1.4.0",
+		"flowbite": "^1.6.6",
+		"flowbite-react": "^0.3.8",
 		"formik": "^2.4.2",
 		"i18next": "^22.5.1",
-		"next": "^12.3.4",
+		"next": "^13.4.8",
 		"nodemailer": "^6.7.7",
-		"react": "18.2.0",
-		"react-dom": "18.2.0",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
 		"react-icons": "^4.4.0",
 		"react-scroll": "^1.8.9",
+		"standard": "^17.0.0",
 		"sweetalert": "^2.1.2",
 		"yup": "^1.2.0"
 	},
@@ -35,8 +37,11 @@
 		"critters": "^0.0.16",
 		"dotenv": "^16.1.4",
 		"eslint": "8.20.0",
-		"eslint-config-next": "12.2.3",
+		"eslint-config-next": "^12.0.4",
 		"postcss": "^8.4.14",
 		"tailwindcss": "^3.1.6"
+	},
+	"eslintConfig": {
+		"extends": ["standard"]
 	}
 }

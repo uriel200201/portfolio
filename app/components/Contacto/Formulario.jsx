@@ -1,17 +1,15 @@
-import React, { useState, useRef } from 'react'
-import { Button, Textarea, TextInput, Label, Alert } from 'flowbite-react'
+'use client'
+
+import React, { useRef } from 'react'
+import { Button, Textarea, TextInput, Label } from 'flowbite-react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircleInfo } from '@fortawesome/free-solid-svg-icons'
+import { faCircleInfo, faSpinner } from '@fortawesome/free-solid-svg-icons'
 import emailjs from '@emailjs/browser'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import { basicSchema } from '../../schema/basicSchema'
 import swal from 'sweetalert'
 
-const CustomInputComponent = ({
-	field, // { name, value, onChange, onBlur }
-	form: { errors }, // also values, setXXXX, handleXXXX, dirty, isValid, status, etc.
-	...props
-}) => {
+const CustomInputComponent = ({ field, form: { errors }, ...props }) => {
 	if (field.name === 'mensaje') {
 		return (
 			<div>
@@ -112,7 +110,7 @@ const Formulario = () => {
 					}
 				}}
 				validationSchema={basicSchema}>
-				{() => (
+				{({ isSubmitting }) => (
 					<Form id='form' ref={form} className='px-[20%]'>
 						<div className='grid md:grid-cols-2 md:gap-x-3 pb-3'>
 							<div>
@@ -176,9 +174,22 @@ const Formulario = () => {
 							/>
 						</div>
 						<div className='flex flex-col items-center gap-y-3'>
-							<Button type='submit' size='lg' className='w-full'>
-								Enviar
-							</Button>
+							{isSubmitting ? (
+								<Button disabled className='w-full'>
+									<FontAwesomeIcon
+										icon={faSpinner}
+										className='inline w-4 h-4 mr-3 text-white animate-spin'
+									/>
+									Enviando
+								</Button>
+							) : (
+								<Button
+									type='submit'
+									size='lg'
+									className='w-full'>
+									Enviar
+								</Button>
+							)}
 						</div>
 					</Form>
 				)}

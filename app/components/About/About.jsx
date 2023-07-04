@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import yo from '../../../public/assets/img/yo.jpg'
 export default function About() {
 	return (
