@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-	@apply scroll-smooth;
-}
-
 .custom-img {
 	background-image: url('https://picsum.photos/seed/picsum/1920/1080');
 }

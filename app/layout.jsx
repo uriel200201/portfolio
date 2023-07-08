@@ -18,7 +18,7 @@ export default function RootLayout({
 			'Uriel, Agustin, Jardel, Ponce, Desarrollador Web, Front-End, Front End, Full-Stack, Next.Js, React.Js, HTML, CSS, JS, JavaScript, PHP, Tailwind, GitHub, Uriel Jardel, Uriel Agustin, Jardel Ponce',
 	}
 	return (
-		<html lang='es'>
+		<html lang='es' className='scroll-smooth'>
 			<head>
 				<link rel='icon' href='favicon.ico' />
 				<title>Uriel Jardel</title>

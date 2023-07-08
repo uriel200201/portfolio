@@ -1,13 +1,15 @@
 //import Link from 'next/link'
+
 import React, { forwardRef } from 'react'
 import { Link } from 'react-scroll'
 
 const ForwardedNavItem = forwardRef(function ForwardedNavItem(
-	{ text, id, active },
+	{ text, id, active, cerrar },
 	ref
 ) {
 	return (
 		<Link
+			onClick={cerrar}
 			to={id}
 			spy={true}
 			smooth={true}
@@ -19,10 +21,18 @@ const ForwardedNavItem = forwardRef(function ForwardedNavItem(
 	)
 })
 
-const NavItem = ({ text, id, active }) => {
+const NavItem = ({ text, id, active, cerrar }) => {
 	const ref = React.useRef()
 
-	return <ForwardedNavItem text={text} id={id} active={active} ref={ref} />
+	return (
+		<ForwardedNavItem
+			text={text}
+			id={id}
+			active={active}
+			ref={ref}
+			cerrar={cerrar}
+		/>
+	)
 }
 
 export default NavItem

@@ -4,6 +4,7 @@ import Herramientas from './components/Herramientas/Herramientas'
 import About from './components/About/About'
 import Proyectos from './components/Proyectos/Proyectos'
 import Contacto from './components/Contacto/Contacto'
+import '../styles/globals.css'
 const Index = () => {
 	return (
 		<>
