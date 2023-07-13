@@ -2,11 +2,11 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import Carousel from './Carousel'
+import CardLoading from './CardLoading'
 
 export default function Proyectos() {
 	const [proyectos, setProyectos] = useState([])
 	const [loading, setLoading] = useState(true)
-	console.log('🚀 ~ file: Proyectos.jsx:9 ~ Proyectos ~ loading:', loading)
 
 	useEffect(() => {
 		const peticion = async () => {
@@ -23,15 +23,20 @@ export default function Proyectos() {
 
 		peticion()
 	}, [])
-
 	return (
 		<div className=''>
 			<section id='proyectos' className='px-8 py-[60px] min-h-screen'>
 				<h2 className='text-center text-5xl pb-10 md:pt-5'>
 					Proyectos
 				</h2>
-				<div>
-					<Carousel proyectos={proyectos} loading={loading} />
+				<div className='transition-opacity duration-500'>
+					{loading ? (
+						<div className='flex justify-between '>
+							<Carousel loading={loading} />
+						</div>
+					) : (
+						<Carousel proyectos={proyectos} loading={loading} />
+					)}
 				</div>
 			</section>
 		</div>

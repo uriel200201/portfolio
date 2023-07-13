@@ -16,7 +16,7 @@ const OwlCarousel = dynamic(() => import('react-owl-carousel'), {
 import CardProyecto from './CardProyecto'
 import CardLoading from './CardLoading'
 
-const Carousel = ({ proyectos, loading }) => {
+const Carousel = ({ proyectos, loading = false }) => {
 	console.log('🚀 ~ file: Carousel.jsx:20 ~ Carousel ~ loading:', loading)
 	const options = {
 		margin: 30,
