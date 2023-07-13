@@ -143,24 +143,6 @@ const NavBar = () => {
 					</ul>
 				</div>
 			</nav>
-			{/* <Navbar
-				fluid={false}
-				rounded
-				`}>
-				<h2 className='self-center whitespace-nowrap text-3xl font-semibold dark:text-white'>
-					<reactScroll.Link
-						to='inicio'
-						spy={true}
-						smooth={true}
-						duration={500}>
-						Uriel <span className='text-[#800080]'>J.</span>
-					</reactScroll.Link>
-				</h2>
-				<Navbar.Toggle />
-				<Navbar.Collapse className='flex flex-col text-center my-4 '>
-					
-				</Navbar.Collapse>
-			</Navbar> */}
 		</div>
 	)
 }
